@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"building...\" && exit 1",
+    "build": "echo \"building...\" && exit 0",
     "release": "dotenv release-it"
   },
   "keywords": [],
