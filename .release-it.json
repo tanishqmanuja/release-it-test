@@ -1,0 +1,33 @@
+{
+	"git": {
+		"tagName": "v${version}",
+		"commitMessage": "chore: release v${version}",
+		"pushRepo": "https://github.com/tanishqmanuja/release-it-test"
+	},
+	"github": {
+		"release": true,
+		"releaseName": "v${version}",
+		"tokenRef": "GITHUB_TOKEN"
+	},
+	"hooks": {
+		"after:bump": [
+			"npm run build"
+		],
+		"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+	},
+	"npm": {
+		"publish": false
+	},
+	"plugins": {
+		"@release-it/bumper": {
+			"in": {
+				"file": "VERSION",
+				"type": "text/plain"
+			},
+			"out": {
+				"file": "VERSION",
+				"type": "text/plain"
+			}
+		}
+	}
+}
