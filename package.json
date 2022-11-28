@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "echo \"building...\" && exit 1",
-    "release": "release-it"
+    "release": "dotenv release-it"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@release-it/bumper": "^4.0.0",
+    "dotenv-cli": "^6.0.0",
     "release-it": "^15.5.0"
   }
 }
